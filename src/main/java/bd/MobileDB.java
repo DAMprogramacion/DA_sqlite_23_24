@@ -79,6 +79,10 @@ public class MobileDB {
              String model = resultSet.getString("model");
              double price = resultSet.getDouble("price");
              mobile = new Mobile(serie, model, price);
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
          }
          return mobile;
      }
