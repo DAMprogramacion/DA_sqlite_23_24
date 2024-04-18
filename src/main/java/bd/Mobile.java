@@ -1,5 +1,7 @@
 package bd;
 
+import java.util.Objects;
+
 public class Mobile   {
     private String serial;
     private String model;
@@ -38,5 +40,18 @@ public class Mobile   {
     @Override
     public String toString() {
         return String.format("%s,%s,%.2f", serial, model, price);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Mobile mobile = (Mobile) o;
+        return Objects.equals(serial, mobile.serial);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(serial);
     }
 }
